@@ -1,26 +1,18 @@
+package br.com.estoque;
+
 public class Main {
     public static void main(String[] args) {
-        Estoque produto = new Estoque("Caneta", 2, 5);
-        System.out.println(produto.mostra());
-        System.out.println("\n");
+        Estoque e = new Estoque();
+        e.setNome("caneta");
+        e.setQtdAtual(10);
+        e.setQtdMin(5);
+        System.out.println(e.mostra());
 
-        produto.darBaixa(2);
-        System.out.println(produto.mostra());
-        if (produto.precisaRepor()) {
-            System.out.println("Produto precisa ser reposto.");
-        }
-        else {
-            System.out.println("Produto não precisa ser reposto.");
-        }
-        System.out.println("\n");
+        Estoque e1 = new Estoque(1,"caderno", 28, 1 );
+        e1.darBaixa(10);
+        System.out.println("Estoque atual: " + e1.getQtdAtual());
+        e1.darBaixa(1000);
 
-        produto.darBaixa(10);
-        System.out.println(produto.mostra());
-        if (produto.precisaRepor()) {
-            System.out.println("Produto precisa ser reposto.");
-        }
-        else {
-            System.out.println("Produto não precisa ser reposto.");
-        }
+        System.out.println(e1.precisaRepor());
     }
 }
