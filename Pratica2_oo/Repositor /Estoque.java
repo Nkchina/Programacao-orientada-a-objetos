@@ -1,57 +1,74 @@
-public class Estoque {
+package br.com.estoque;
 
+public class Estoque {
+    private int codProd;
     private String nome;
     private int qtdAtual;
-    private int qtdMinima;
+    private int qtdMin;
 
     public Estoque() {
     }
 
-    public Estoque(String nome, int qtdAtual, int qtdMinima) {
+    public Estoque(int codProd, String nome, int qtdAtual, int qtdMin) {
+        this.codProd = codProd;
         this.nome = nome;
         this.qtdAtual = qtdAtual;
-        this.qtdMinima = qtdMinima;
+        this.qtdMin = qtdMin;
     }
 
-    public String getNome() {
-        return nome;
+    public void setCodProd(int codProd) {
+        this.codProd = codProd;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public int getQtdAtual() {
-        return qtdAtual;
-    }
-
     public void setQtdAtual(int qtdAtual) {
         this.qtdAtual = qtdAtual;
     }
 
-    public int getQtdMinima() {
-        return qtdMinima;
+    public void setQtdMin(int qtdMin) {
+        this.qtdMin = qtdMin;
     }
 
-    public void setQtdMinima(int qtdMinima) {
-        this.qtdMinima = qtdMinima;
+    public int getCodProd() {
+        return codProd;
     }
 
-    public void darBaixa(int qtde) {
-        int novaQtd = this.qtdAtual - qtde;
-        if (novaQtd < 0) {
-            System.out.println("Não é possível dar baixa, quantidade insuficiente em estoque.");
+    public String getNome() {
+        return nome;
+    }
+
+    public int getQtdAtual() {
+        return qtdAtual;
+    }
+
+    public int getQtdMin() {
+        return qtdMin;
+    }
+
+    public void darBaixa(int qtd){
+        qtdAtual = qtdAtual - qtd;
+        if(qtd <= qtdAtual ){
         }
         else {
-            this.qtdAtual = novaQtd;
+            System.out.print("Estoque insuficiente para a baixa");
         }
     }
 
-    public String mostra() {
-        return "Nome: " + this.nome + "\nQuantidade atual: " + this.qtdAtual + "\nQuantidade mínima: " + this.qtdMinima;
+    public String mostra(){
+        return "Produto: " + this.nome + "\n" +
+                "Quantidade minima :" + this.qtdMin + "\n" +
+                "Quantidade atual: " + this.qtdAtual;
     }
 
-    public boolean precisaRepor() {
-        return this.qtdAtual <= this.qtdMinima;
+    public boolean precisaRepor(){
+        if(getQtdAtual() <= getQtdMin()){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
