@@ -8,7 +8,7 @@ public class Main {
 
         switch (opcao) {
             case 1 -> {
-                Ingresso ingressoNormal = new Normal(50.0);
+                Ingresso ingressoNormal = new Normal(50);
                 JOptionPane.showMessageDialog(null, "Valor do Ingresso Normal: R$ " +
                         ingressoNormal.getValor());
             }
