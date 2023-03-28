@@ -1,8 +1,8 @@
 package br.com.veiculo.newton;
 
-public abstract class Veiculo {
-    private String placa;
-    private int ano;
+public class Veiculo {
+    private final String placa;
+    private final int ano;
 
     public Veiculo(String placa, int ano) {
         this.placa = placa;
@@ -17,5 +17,7 @@ public abstract class Veiculo {
         return ano;
     }
 
-    public abstract String exibirDados();
+    public String exibirDados() {
+        return "Placa: " + placa + "\nAno: " + ano;
+    }
 }
