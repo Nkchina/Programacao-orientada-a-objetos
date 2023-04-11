@@ -6,4 +6,4 @@ c) class B extends class A {}
 d) class B + class A {}
 e) class A extends class B {}
 
-R: B.
+R: A.
