@@ -1,4 +1,4 @@
-public class AchadoPerdido {
+public class AchadoPerdido implements Publicacao {
     private String titulo;
     private String descricao;
     private String foto;
