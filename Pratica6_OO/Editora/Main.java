@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Artigo> artigos = new ArrayList<Artigo>();
-        artigos.add(new Artigo("FLAMENGO 8X2", "Resumo do artigo 1", "Autor do artigo 1"));
+        artigos.add(new Artigo("Fítulo do artigo 1", "Resumo do artigo 1", "Autor do artigo 1"));
         artigos.add(new Artigo("Título do artigo 2", "Resumo do artigo 2", "Autor do artigo 2"));
         artigos.add(new Artigo("Título do artigo 3", "Resumo do artigo 3", "Autor do artigo 3"));
         artigos.add(new Artigo("Título do artigo 4", "Resumo do artigo 4", "Autor do artigo 4"));
