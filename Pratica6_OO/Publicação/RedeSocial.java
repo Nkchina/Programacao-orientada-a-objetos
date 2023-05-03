@@ -53,10 +53,11 @@ public class RedeSocial {
 
     public void imprimePublicacoes() {
         System.out.println("Total de publicações: " + Publicacao.getContadorPublicacao());
-        for (Publicacao publi : publicacoes) {
-            System.out.println("Data de publicação: " + publi.getDataPublicacao());
-            System.out.println("Texto da publicação: " + publi.getTextoPublicacao());
-            System.out.println("Link da mídia: " + publi.getLinkMidia());
+
+        for (int i=0; i < publicacoes.size(); i++) {
+            System.out.println("Data de publicação: " + publicacoes.get(i).getDataPublicacao());
+            System.out.println("Texto da publicação: " + publicacoes.get(i).getTextoPublicacao());
+            System.out.println("Link da mídia: " + publicacoes.get(i).getLinkMidia());
         }
     }
 }
