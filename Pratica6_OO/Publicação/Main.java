@@ -12,7 +12,8 @@ public class Main {
 
         RedeSocial redeSocial = new RedeSocial(dataCriacao, nomeUsuario, dataNascimento, senha);
 
-        int numPublicacoes = Integer.parseInt(JOptionPane.showInputDialog("Digite o número de publicações a serem cadastradas:"));
+        int numPublicacoes = Integer.parseInt(JOptionPane.showInputDialog
+                                              ("Digite o número de publicações a serem cadastradas:"));
 
         for (int i = 0; i < numPublicacoes; i++) {
             String dataPublicacao = JOptionPane.showInputDialog("Digite a data da publicação:");
